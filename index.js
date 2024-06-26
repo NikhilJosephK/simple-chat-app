@@ -21,9 +21,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// Expose the server as a Vercel serverless function
-export default (req, res) => {
-  server.listen(0, () => {
-    console.log("Server started");
-  });
-};
+server.listen(3000, () => {
+  console.log("server running at http://localhost:3000");
+});
